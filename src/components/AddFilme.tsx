@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, {useState, useEffect} from 'react';
 import { TextField, Button, Container, Stack } from '@mui/material';
 import { Link } from "react-router-dom"
@@ -18,7 +19,7 @@ const AddFilme = () => {
               }),
             }
               ).then(response => console.log(response.json()))
-              .then(data => (<Link to="/" />))
+              .then(data => (window.location.replace("https://lucasknutr.github.io/locadora-de-filmes/")))
     }
  
     return (

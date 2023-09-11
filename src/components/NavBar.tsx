@@ -1,5 +1,5 @@
 // *** COMPONENTE IMPORTADO DO FRAMEWORK MATERIAL UI, CUSTOMIZADO PARA ATENDER ÀS NECESSIDADES DA LOCADORA DE FILMES
-
+// @ts-nocheck
 import * as React from 'react';
 // links do react-router-dom
 import { Link } from 'react-router-dom';
@@ -22,15 +22,12 @@ const pages = ['Inicio', 'Adicionar Filme', 'GitHub'];
 const settings = ['Github', 'LinkedIn', 'Instagram', 'Facebook'];
 
 
-const NavBar = () => {    
+const NavBar = ({ menu }) => {    
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
@@ -93,11 +90,23 @@ const NavBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <Link to="/locadora-de-filmes/">
+                  <MenuItem key='Inicio' onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">Inicio</Typography>
+                  </MenuItem>
+              </Link>
+              <Link to="/novo">
+              <MenuItem key='addFilme' onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">Adicionar Filme</Typography>
                 </MenuItem>
-              ))}
+              </Link>
+              <Link to="https://github.com/lucasknutr">
+                <MenuItem key='Github' onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">Github</Typography>
+                </MenuItem>
+                
+              </Link>
+              
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -120,7 +129,7 @@ const NavBar = () => {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-              <Link to="/">
+              <Link to="/locadora-de-filmes/">
                 <Button
                   key="Catalogo"
                   onClick={handleCloseNavMenu}
@@ -152,10 +161,12 @@ const NavBar = () => {
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Fazer login">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }} className='text-white'>
+              <Link to="/login">
+              <IconButton sx={{ p: 0 }} className='text-white'>
                 {/* <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" /> */}
-                Entrar
+                {menu}
               </IconButton>
+              </Link>
             </Tooltip>
             <Menu
               sx={{ mt: '45px' }}

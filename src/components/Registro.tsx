@@ -32,7 +32,6 @@ const Registro = ({ setNome, setNascimento, setAboutme, setEmail, nome, nascimen
 
     const handleRegistro = (e) => {
       e.preventDefault();
-      createUserWithEmailAndPassword(email, password);
       fetch("https://us-central1-locadora-de-filmes-7b992.cloudfunctions.net/app/api/novoUser", {
         method: "post",
         headers: {"Content-Type": "application/json"},
@@ -42,7 +41,10 @@ const Registro = ({ setNome, setNascimento, setAboutme, setEmail, nome, nascimen
           nascimento: nascimento,
           aboutme: aboutme
         }),
-      }).then(response => console.log(response))
+      }).then(response => response.json)
+      .then(data => {
+        createUserWithEmailAndPassword(email, password);
+      })
       .then(dados => {
         return <Link to="/locadora-de-filmes/Usuario" />
       });

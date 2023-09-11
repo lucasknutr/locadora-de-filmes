@@ -9,6 +9,7 @@ const AddFilme = () => {
     const [ano, setAno] = useState('')
     const [posterURL, setPosterURL] = useState('')
     const handleAdd = () => {
+
         fetch(`https://us-central1-locadora-de-filmes-7b992.cloudfunctions.net/app/api/create/`, {
               method: "post",
               headers:{"Content-Type": "application/json"},

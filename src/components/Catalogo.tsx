@@ -22,8 +22,8 @@ function Catalogo() {
 
   return (
     <div className="flex justify-center align-center mx-auto px-8">
-            <div className="w-[100%] max-w-screen-2xl text-center"><p className="font-normal text-gray-700 lg:text-xl overflow-scroll">
-              <ul className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 p-10">
+            <div className="w-[100%] max-w-screen-2xl text-center"><p className="font-normal text-gray-700 lg:text-xl">
+              <ul className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-8 p-10">
                 {display}
               </ul>
               </p>

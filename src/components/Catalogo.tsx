@@ -2,6 +2,8 @@
 import { useEffect, useState } from 'react'
 import Card from './Card'
 
+// Apenas um display de filmes padrão, pega a lista da minha base de dados através de método get()
+
 function Catalogo() {
   const [display, setDisplay] = useState("");
   useEffect(() => {

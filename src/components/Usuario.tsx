@@ -2,6 +2,9 @@
 import { useEffect } from "react"
 import { Link } from "react-router-dom";
 
+// Apresentacao de usuario, apenas elementos simples
+// * Utilizei o robohash para gerar uma foto de perfil unica para cada email de novo usuario
+
 function Usuario({nome, nascimento, aboutme, email, setNascimento, setNome, setAboutme }) {
     useEffect(() => {
         fetch(`https://us-central1-locadora-de-filmes-7b992.cloudfunctions.net/app/api/getUser/${email}`)

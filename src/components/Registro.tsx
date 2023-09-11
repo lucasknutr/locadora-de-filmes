@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { auth } from "../services/firebaseConfig"
 
+// Registro padrao usando o proprio boilerplate dos hooks para firebase
+
 const Registro = ({ setNome, setNascimento, setAboutme, setEmail, nome, nascimento, aboutme, email, setMenu }) => {
     const [password, setPassword] = useState("");
     const [

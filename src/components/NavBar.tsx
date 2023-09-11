@@ -1,7 +1,7 @@
 // *** COMPONENTE IMPORTADO DO FRAMEWORK MATERIAL UI, CUSTOMIZADO PARA ATENDER ÀS NECESSIDADES DA LOCADORA DE FILMES
 // @ts-nocheck
 import * as React from 'react';
-// links do react-router-dom
+// links do react-router-dom - vou utilizar para adicionar links de routing para as opcoes
 import { Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';

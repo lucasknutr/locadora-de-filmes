@@ -9,6 +9,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { TextField, Button, Container, Stack } from '@mui/material';
 
 // * Modal importado do framework Material UI
+// * Customizado por mim para atender às necessidades do projeto
 
 const style = {
     position: 'absolute' as 'absolute',

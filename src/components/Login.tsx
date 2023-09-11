@@ -6,6 +6,7 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { auth } from "../services/firebaseConfig";
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 
+// Componente de login usando a autenticacao do firebase
 
 const Login = ({ setMenu, setNome, email, setEmail, setAboutme, setNascimento }) => {
     const [password, setPassword] = useState("");
@@ -37,30 +38,6 @@ const Login = ({ setMenu, setNome, email, setEmail, setAboutme, setNascimento })
         return alert("Informações não são válidas. Tente novamente ou registre-se.");
     }
 
-    // const handleClick = () => {
-    //     if(email.length > 1 && password.length > 1){
-    //       fetch('', {
-    //         method: "post",
-    //         headers:{"Content-Type": "application/json"},
-    //         body: JSON.stringify({
-    //           email: email,
-    //           senha: senha
-    //         }),
-    //     })
-    //     .then(data => data.json())
-    //     .then(response =>  {
-    //         if(response.status === 400){
-    //          alert("ERRO: Usuário não encontrado.")
-    //         } else {
-    //             setMenu(`Olá, ${response.nome}`)
-    //             return <Link to="/locadora-de-filmes/" />
-    //         }
-    //       }
-    //     )
-    //     .catch(err => console.log('error while trying to sign in: ', err))
-    //     }
-    //   }
-    
 
   return (
     <div className='flex justify-center items-center w-[100svw] h-[100svh] bg-slate-300'>

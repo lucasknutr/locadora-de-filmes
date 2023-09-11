@@ -30,5 +30,5 @@ const app = initializeApp(firebaseConfig);
 
 
 
-
+// Exportando minha variavel de autenticacao
 export const auth = getAuth(app);

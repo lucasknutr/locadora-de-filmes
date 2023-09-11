@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react';
 import { TextField, Button, Container, Stack } from '@mui/material';
 import { Link } from "react-router-dom"
  
- 
+ // Componente que vai dialogar com a base de dados para adicionar filme
 const AddFilme = () => {
     const [nome, setNome] = useState('')
     const [ano, setAno] = useState('')

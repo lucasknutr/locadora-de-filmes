@@ -1,4 +1,4 @@
-# A Locadora(https://lucasknutr.github.io/locadora-de-filmes/)
+# [A Locadora](https://lucasknutr.github.io/locadora-de-filmes/)
 
 Este é um site que simula um catálogo coletivo de filmes, com integração para sistemas de login, páginas de usuário. Um CRUD completo para administração do catálogo.
 
